@@ -12,6 +12,7 @@
   "dependencies": {
     "@aptos-labs/ts-sdk": "^1.28.0",
     "@types/sqlite3": "^3.1.11",
+    "@vercel/node": "^3.0.12",
     "apollo-server-express": "^3.12.1",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
