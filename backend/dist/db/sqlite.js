@@ -12,7 +12,7 @@ const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 let db = null;
 async function initDB() {
-    const dbPath = path_1.default.join(__dirname, '../../data/prediq.db');
+    const dbPath = process.env.DB_PATH || path_1.default.join(__dirname, '../../data/prediq.db');
     // Ensure data directory exists
     const dataDir = path_1.default.dirname(dbPath);
     if (!fs_1.default.existsSync(dataDir)) {

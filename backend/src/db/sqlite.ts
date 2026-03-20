@@ -6,7 +6,7 @@ import fs from 'fs';
 let db: Database | null = null;
 
 export async function initDB(): Promise<void> {
-  const dbPath = path.join(__dirname, '../../data/prediq.db');
+  const dbPath = process.env.DB_PATH || path.join(__dirname, '../../data/prediq.db');
   
   // Ensure data directory exists
   const dataDir = path.dirname(dbPath);
